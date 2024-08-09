@@ -10,6 +10,7 @@ defmodule Nocturno.CLI do
         case Nocturno.read_config(config_path) do
           {:ok, paths, notifications} ->
             {:ok, _pid} = Nocturno.start_link(paths, notifications)
+            IO.puts("\nnocturno started...")
             :timer.sleep(:infinity)
 
           {:error, reason} ->
