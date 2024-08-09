@@ -13,7 +13,7 @@ defmodule Nocturno.MixProject do
   end
 
   defp escript do
-    [main_module: Nocturno]
+    [main_module: Nocturno.CLI]
   end
 
   # Run "mix help compile.app" to learn about applications.
@@ -26,6 +26,7 @@ defmodule Nocturno.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      {:file_system, "~> 1.0"},
       {:jason, "~> 1.4"}
     ]
   end
